@@ -1,0 +1,402 @@
+$date
+	Wed Jan  8 17:24:35 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$scope module dut $end
+$var reg 1 ! clk $end
+$var reg 1 " reset $end
+$scope module cu $end
+$var wire 1 ! clk $end
+$var wire 1 " reset $end
+$var wire 8 # mem_bus [7:0] $end
+$var wire 12 $ control_signals [11:0] $end
+$var wire 8 % bus [7:0] $end
+$var wire 1 & SEL $end
+$var wire 1 ' M2 $end
+$var wire 3 ( M1 [2:0] $end
+$var wire 4 ) ADDR [3:0] $end
+$var parameter 4 * ADD1 $end
+$var parameter 4 + ADD2 $end
+$var parameter 4 , AND1 $end
+$var parameter 4 - AND2 $end
+$var parameter 3 . CLR1 $end
+$var parameter 4 / FETCH1 $end
+$var parameter 4 0 FETCH2 $end
+$var parameter 4 1 FETCH3 $end
+$var parameter 4 2 INC1 $end
+$var parameter 4 3 JMP1 $end
+$var reg 8 4 AC [7:0] $end
+$var reg 8 5 ALU [7:0] $end
+$var reg 6 6 AR [5:0] $end
+$var reg 8 7 DR [7:0] $end
+$var reg 2 8 IR [1:0] $end
+$var reg 6 9 PC [5:0] $end
+$var reg 13 : microcode [12:0] $end
+$var reg 4 ; state [3:0] $end
+$scope module mem0 $end
+$var wire 1 < READ $end
+$var wire 6 = address [5:0] $end
+$var wire 8 > data [7:0] $end
+$var reg 8 ? data_out [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1100 3
+b1110 2
+b10 1
+b1 0
+b0 /
+b11 .
+b1011 -
+b1010 ,
+b1001 +
+b1000 *
+$end
+#0
+$dumpvars
+bx ?
+bz >
+bz =
+0<
+b0 ;
+b10000001 :
+b0 9
+b0 8
+b0 7
+bz 6
+b0 5
+b0 4
+b1 )
+b10 (
+0'
+0&
+b0 %
+b1000000001 $
+bz #
+1"
+0!
+$end
+#1
+b0 ;
+0"
+1!
+#2
+b0 6
+b0 =
+0!
+#3
+b1000000 ?
+b1000000 5
+b1000000 #
+b1000000 >
+1<
+b1000000 %
+b1 (
+b100100001010 $
+1'
+b10 )
+b1010010 :
+b1 ;
+1!
+#4
+b0 9
+b1000000 7
+0!
+#5
+bz #
+bz >
+0<
+1&
+b11 (
+b10001000001 $
+0'
+bx )
+b100001100xxxx :
+b10 ;
+1!
+#6
+b1 8
+0!
+#7
+b1000000 #
+b1000000 >
+1<
+0&
+b100100001000 $
+b1 (
+b1011 )
+b1001011 :
+b1010 ;
+1!
+#8
+0!
+#9
+b0 5
+b1000000 %
+bz #
+bz >
+0<
+b10010010000 $
+b110 (
+b0 )
+b110000000 :
+b1011 ;
+1!
+#10
+0!
+#11
+b0 5
+b0 %
+b1000000001 $
+b10 (
+b1 )
+b10000001 :
+b0 ;
+1!
+#12
+0!
+#13
+b1000000 5
+b1000000 #
+b1000000 >
+1<
+b1000000 %
+b1 (
+b100100001010 $
+1'
+b10 )
+b1010010 :
+b1 ;
+1!
+#14
+b0 9
+0!
+#15
+bz #
+bz >
+0<
+1&
+b11 (
+b10001000001 $
+0'
+bx )
+b100001100xxxx :
+b10 ;
+1!
+#16
+0!
+#17
+b1000000 #
+b1000000 >
+1<
+0&
+b100100001000 $
+b1 (
+b1011 )
+b1001011 :
+b1010 ;
+1!
+#18
+0!
+#19
+b0 5
+b1000000 %
+bz #
+bz >
+0<
+b10010010000 $
+b110 (
+b0 )
+b110000000 :
+b1011 ;
+1!
+#20
+0!
+#21
+b0 5
+b0 %
+b1000000001 $
+b10 (
+b1 )
+b10000001 :
+b0 ;
+1!
+#22
+0!
+#23
+b1000000 5
+b1000000 #
+b1000000 >
+1<
+b1000000 %
+b1 (
+b100100001010 $
+1'
+b10 )
+b1010010 :
+b1 ;
+1!
+#24
+b0 9
+0!
+#25
+bz #
+bz >
+0<
+1&
+b11 (
+b10001000001 $
+0'
+bx )
+b100001100xxxx :
+b10 ;
+1!
+#26
+0!
+#27
+b1000000 #
+b1000000 >
+1<
+0&
+b100100001000 $
+b1 (
+b1011 )
+b1001011 :
+b1010 ;
+1!
+#28
+0!
+#29
+b0 5
+b1000000 %
+bz #
+bz >
+0<
+b10010010000 $
+b110 (
+b0 )
+b110000000 :
+b1011 ;
+1!
+#30
+0!
+#31
+b0 5
+b0 %
+b1000000001 $
+b10 (
+b1 )
+b10000001 :
+b0 ;
+1!
+#32
+0!
+#33
+b1000000 5
+b1000000 #
+b1000000 >
+1<
+b1000000 %
+b1 (
+b100100001010 $
+1'
+b10 )
+b1010010 :
+b1 ;
+1!
+#34
+b0 9
+0!
+#35
+bz #
+bz >
+0<
+1&
+b11 (
+b10001000001 $
+0'
+bx )
+b100001100xxxx :
+b10 ;
+1!
+#36
+0!
+#37
+b1000000 #
+b1000000 >
+1<
+0&
+b100100001000 $
+b1 (
+b1011 )
+b1001011 :
+b1010 ;
+1!
+#38
+0!
+#39
+b0 5
+b1000000 %
+bz #
+bz >
+0<
+b10010010000 $
+b110 (
+b0 )
+b110000000 :
+b1011 ;
+1!
+#40
+0!
+#41
+b0 5
+b0 %
+b1000000001 $
+b10 (
+b1 )
+b10000001 :
+b0 ;
+1!
+#42
+0!
+#43
+b1000000 5
+b1000000 #
+b1000000 >
+1<
+b1000000 %
+b1 (
+b100100001010 $
+1'
+b10 )
+b1010010 :
+b1 ;
+1!
+#44
+b0 9
+0!
+#45
+bz #
+bz >
+0<
+1&
+b11 (
+b10001000001 $
+0'
+bx )
+b100001100xxxx :
+b10 ;
+1!
+#46
+0!
+#47

@@ -3,9 +3,6 @@ module memory(input [5:0] address, input READ, inout wire [7:0] data);
 	reg [7:0] mem[0:63];  
 	reg [7:0] data_out;
 
-	always @(posedge WRITE) //write to memory
-		mem[address] <= data;
-
 	always @(posedge READ) //read from memory
 		data_out <= mem[address];
 

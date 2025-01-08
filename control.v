@@ -13,7 +13,7 @@ module control(input clk, input reset);
 	parameter FETCH1 = 4'd0, FETCH2 = 4'd1, FETCH3 = 4'd2, CLR1 = 3'd3, ADD1 = 4'd8, ADD2 = 4'd9, AND1 = 4'd10, AND2 = 4'd11, JMP1 = 4'd12, INC1 = 4'd14;
 	
 	//microcode part (?)
-	reg [12:0] microcoded_memory; 
+	reg [12:0] microcoded_memory [0:15]; 
 	reg [12:0] microcode;
 
 	initial begin
@@ -58,13 +58,13 @@ module control(input clk, input reset);
 	assign control_signals[1] = M2; //PCINC
 	assign control_signals[2] = M1==3'd4; //PCLOAD
 	assign control_signals[3] = M1==3'd1; //DRLOAD
-	assign control_singals[4] = M1==3'd5 || control_signals[7]; //ACLOAD
+	assign control_signals[4] = control_signals[7] || M1==3'd5; //ACLOAD
 	assign control_signals[5] = M1==3'd7; //ACINC
 	assign control_signals[6] = M1==3'd3; //IRLOAD
 	assign control_signals[7] = M1==3'd6;//ALUSEL
 	assign control_signals[8] = control_signals[3]; //MEMBUS
-	assign control_signals[9] = M1=3'd2; //PCBUS
-	assign control_signals[10] = control_signals[6] || control_signals[2] || control_signal[4]; //DRBUS
+	assign control_signals[9] = M1==3'd2; //PCBUS
+	assign control_signals[10] = control_signals[6] || control_signals[2] || control_signals[4]; //DRBUS
 	assign control_signals[11] = control_signals[3]; //READ
 
 
@@ -81,7 +81,7 @@ module control(input clk, input reset);
 
 	always @(*) ALU <= control_signals[7] ? (bus & AC) : (bus + AC);
 	
-	assign bus = control[9] ? {2'b00, PC} : (control_signal[10] ? DR : (control_signals[8] ? mem_bus : 8'bz));
+	assign bus = control_signals[9] ? {2'b00, PC} : (control_signals[10] ? DR : (control_signals[8] ? mem_bus : 8'bz));
 
 	memory mem0 ( .address(AR), .READ(control_signals[11]), .data(mem_bus) );
 endmodule
