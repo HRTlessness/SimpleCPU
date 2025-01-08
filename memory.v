@@ -1,4 +1,4 @@
-module memory(input [5:0] address, input WRITE, input READ, inout wire [7:0] data);
+module memory(input [5:0] address, input READ, inout wire [7:0] data);
 	initial $readmemh("mem_hex.txt", mem);
 	reg [7:0] mem[0:63];  
 	reg [7:0] data_out;
